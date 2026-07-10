@@ -18,16 +18,30 @@ Every parent knows the feeling: you hand a child a phone for five minutes of a l
 
 ## What it is
 
-[**KidKat**](https://naveenneog.github.io/KidKat/) plays a **finite, parent-approved stream** of short **educational** videos — and nothing else:
+[**KidKat**](https://naveenneog.github.io/KidKat/) gives children a safe, **finite** stream of short *educational* videos chosen by their parents — a curated front-end built entirely on official, permitted YouTube building blocks. Everything on the live site is shipping:
 
-- videos play inside the **official YouTube player** via the official **Data API** (fully **ToS-compliant**)
-- a **parent allowlist** decides exactly what's on the menu
-- the feed is **finite** — it ends. No infinite scroll, no recommendations, no rabbit holes.
-- built with **Flutter** for both **Android and iOS**
+- **Finite sessions** — a set number of videos, then a friendly **break screen**. No infinite feed.
+- **Daily time limit** — when time's up, the app locks until tomorrow (a parent can extend).
+- **Swipe up/down player** — swipe **up = next**, **down = previous**, tap to pause; related suggestions are restricted to the **same channel**.
+- **Save favorites**, **no repeats** (already-watched videos are skipped), **strict Safe Search** (embeddable-only, short-only ≤1/≤4 min).
+- **Parent PIN gate** on all settings, with a dashboard for the API key, interests, the **approved-channel allowlist**, daily limit, videos-per-session, and video length.
+- **Age bands** (3–5 / 6–8 / 9–12) pre-load trusted channels, plus **12 learning topics** and **5 colorful themes**.
+
+## How it was built
+
+The whole app is a lesson in **building within the rules**. The original idea — *"log into a YouTube Kids account and override the algorithm"* — turned out to be impossible **and** against the rules, and confronting that honestly shaped everything:
+
+- ❌ There is **no public YouTube Kids API** (Kids accounts are COPPA-restricted).
+- ❌ The YouTube API ToS **forbid** interfering with recommendations or building a substitute client.
+- ❌ Apps **must** use the official embedded player — no stream extraction.
+
+So KidKat takes the **compliant path that reaches the same goal**: **discovery** via the official **YouTube Data API v3** (search + metadata only), **playback** via the official **IFrame player** (`youtube_player_iframe`, so creators keep their views and monetization), and **its own curation** — a parent allowlist plus an education filter — layered *on top of*, never altering, YouTube's algorithm. **No Kids-account login, no analytics/ads SDKs, no child PII**; the parent's API key and PIN live **on-device only**.
+
+Under the hood it's a single **Flutter** codebase for **Android and iOS**: **Riverpod** for state and **go_router** (with an onboarding redirect and the parent gate). `YouTubeApi` searches then hydrates videos (embeddable-only); `CurationService.buildSession` produces the **finite, filtered, de-duplicated** queue that is the heart of the anti-doomscroll design. The test suite covers ISO-8601 duration parsing, the curation filter, the Data API client (mocked, including quota/invalid-key handling), daily watch-time accounting, and end-to-end session building.
 
 ## The good
 
-This is the heart of **#AI4Good**: the most powerful thing technology can do for the youngest users is often to **do less** — to be calm, bounded, and intentional. KidKat turns the scariest part of modern parenting into something a parent fully controls. **AI for good starts with protecting kids.**
+This is the heart of **#AI4Good**: the most powerful thing technology can do for the youngest users is often to **do less** — to be calm, bounded, and intentional. KidKat turns the scariest part of modern parenting into something a parent fully controls, without collecting a byte of a child's data. **AI for good starts with protecting kids.**
 
 ## Try it
 

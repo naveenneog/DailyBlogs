@@ -20,13 +20,19 @@ Chess was born in India as **Chaturanga** — the "game of the four divisions." 
 
 [**Chaturanga**](https://naveenneog.github.io/Chaturanga/) is ancient chess in **real-time glowing 3D**, with a full teach-and-play layer:
 
-- a **five-level teaching AI** (alpha-beta engine in a Web Worker)
-- a **coach** that reviews your blunders and names the better move
-- an **openings trainer** that walks classic lines move by move
-- a rotating **piece inspector** and a *Warrior's Eye* camera
-- **four worlds**, each teaching a moral lesson — Web **and** Android
+- **Play the Guru** — an alpha-beta chess AI with **five difficulty levels** (Padati → Mantri), running in a **Web Worker** so the board stays smooth on phones.
+- **A coach** — a **Hint** that names the best move *and why*, plus a **blunder review** that gently flags mistakes and shows the stronger move.
+- **Openings trainer** — six classic openings (Italian, Ruy López, Sicilian, French, Queen's Gambit, King's Indian) walked **move-by-move** with a narrated lesson.
+- **Piece inspector** — tap a piece for a **rotating 3D render** and a diagram of how it moves and captures; a **Warrior's Eye** camera looks across the board from a piece's point of view.
+- **Four themed worlds**, each with its own army, board art, teachings and a portrait cinematic intro. Local hotseat, undo, captured-pieces tray, under-promotion, read-aloud narration — **no backend, works offline**.
 
-The carved 3D pieces are their own #AI4Good story: I generated each from a single concept image using a **free Hugging Face Space** and headless Blender — [read the full image-to-3D build here]({{ '/2026/07/10/image-to-3d-huggingface-blender-copilot/' | relative_url }}).
+## How it was built
+
+The web app is deliberately **buildless** — **vanilla ES modules**, [chess.js](https://github.com/jhlywa/chess.js) for the rules, [three.js](https://threejs.org/) for rendering, Capacitor for Android. The interesting parts:
+
+- **A real chess engine, in the browser.** The AI is **alpha-beta negamax with quiescence search, MVV-LVA move ordering, and piece-square evaluation** over chess.js, exposed as `analyze()` / `bestMove()` / `classifyMove()`. It runs in a **Web Worker** (with a main-thread fallback) so search never janks the render loop, and the five levels scale depth, blunder-rate and time cap. Root moves are searched **full-window** so every move gets an exact score — which is what makes the coach's **blunder detection** possible.
+- **The pieces are AI-reconstructed, not hand-modelled.** Each one starts as a themed **`gpt-image-2`** concept, becomes a mesh via the **free Hunyuan3D-2 Hugging Face Space**, gets its concept **projected back on as texture in headless Blender**, and ships as a small web GLB. Portrait intros are generated with **Azure Sora-2**. [The full image-to-3D pipeline is its own post here]({{ '/2026/07/10/image-to-3d-huggingface-blender-copilot/' | relative_url }}).
+- Tested with `node:test` (rules + engine + coach/openings + all-worlds validation) and shipped as a debug-signed **Capacitor APK** (`npm run apk`, JDK 21).
 
 ## The good
 

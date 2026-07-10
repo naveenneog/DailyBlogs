@@ -14,16 +14,23 @@ excerpt: "How I turned Karnataka's 500-year-old leather shadow-puppet theatre, T
 
 [![The Lamp & the Machine — Togalu Gombeyaata meets generative AI]({{ shot | append: '/shot-sora.png' | relative_url }})](https://naveenneog.github.io/Sora-Azure-MultiPart-Video-Editing/)
 
-Under a banyan tree, a storyteller lights the brass oil lamps and, on a stretched cotton screen backlit by fire, a legend moves. This is **Togalu Gombeyaata** — Karnataka's **500-year-old leather shadow-puppet theatre** — and it is quietly disappearing. *The Lamp & the Machine* is my attempt to hand it a new stage.
+Under a banyan tree, a storyteller lights the brass oil lamps and, on a stretched cotton screen backlit by fire, a legend moves. This is **Togalu Gombeyaata** — Karnataka's leather shadow-puppet theatre — and it is quietly disappearing. *The Lamp & the Machine* is my attempt to hand it a new stage: an AI-generated shadow-puppet film that retells the story of **Kempegowda**, the 16th-century chieftain who, in 1537, ploughed the four streets that became **Bengaluru**.
 
 ## What it is
 
-[**The Lamp & the Machine**](https://naveenneog.github.io/Sora-Azure-MultiPart-Video-Editing/) turns that folk theatre into an **AI film studio**:
+[**The Lamp & the Machine**](https://naveenneog.github.io/Sora-Azure-MultiPart-Video-Editing/) is both a **film** and a **build log** — a single themed page that walks through turning a folk theatre into an AI film studio, told in three acts. The film exists in **four different narration cuts** of the same visuals, and the project produced two reusable skills along the way.
 
-- cinematic scenes generated with **Sora 2**, styled as backlit leather puppets
-- **Azure AI** neural voices for narration, **Demucs** to isolate music, **FFmpeg** to finish
-- **four narration cuts** of the same film, and a step-by-step **skill build log**
-- a first film that retells the story of **Kempegowda**, the founder of Bengaluru
+## How it was built
+
+This is the richest build story of the series, so here's the honest version — bugs and all.
+
+**Act I — the images (Sora 2 on Azure AI Foundry).** The hard part of a multi-scene film isn't generating a clip, it's stopping every clip from **drifting**. Independent generations wander — the hero's turban changes, the palette shifts, the backlit screen becomes a photoreal sunset. The fix was a **locked "Style Bible"** and a five-beat grammar — *Invocation → Character → Journey → Conflict → Resolution → Moral* — injected verbatim into all ~25 scenes, rendered at 12 seconds a clip and stitched with a shared warm-firelight grade and crossfades. The lesson came from one bug: scene 3 drifted into a photoreal landscape because a single line said *"movement past Indian landscapes, palaces, forests, rivers."* Sora read it as *paint a real location.* Rewording it to "flat cut-leather silhouettes on the same backlit screen" killed the drift.
+
+**Act II — the voice (the editing problem in four words: *keep the music, change the voice*).** The first cut narrated itself beautifully… in **Kannada** — because the Style Bible's `audio` field said "a wise elder Kannada storyteller" (confirmed by transcribing with **gpt-4o-transcribe**). I wanted an English cut *without* losing the veena, mridangam and temple bells Sora had baked into the same track. So I ran the audio through **Demucs (htdemucs)** source separation to split **vocals** from **music + ambience**, dropped the old narration, kept the music bed, laid a fresh **Azure Neural** voice on top with side-chain **ducking**, and remuxed onto the untouched video.
+
+**Act III — the cast.** One narrator became a company: a warm male elder (**en-IN-Prabhat**), a female voice (**en-IN-Neerja**, with *empathetic* and *cheerful* styles), and a **unison** finale. The first multi-voice cut taught two lessons — it sounded robotic (I'd pushed prosody too far, `-8%` rate / `-2st` pitch, adding artifacts) and cut out after 90 seconds (a real offset bug). Softening the prosody and switching to Azure's ultra-natural **DragonHD** voices (en-IN-Arjun, en-IN-Neerja) — so lifelike no time-stretching was needed — produced the **flagship cut**.
+
+**The pipeline**, all on Azure with **Microsoft Entra (AAD) auth — no API keys**, orchestrated from the terminal: **Sora 2** (video) · **gpt-4o-transcribe** (audio QA) · **Azure AI Speech** (en-IN neural + DragonHD) · **Demucs** (separation) · **FFmpeg** (stitch, duck, mix, remux) · **Python 3.14**. It even spun off three reusable **skills** — `togalu-gombe-video`, `voice-dub`, and `togalu-brand-bumpers` (opening jingle + end credits).
 
 ## The good
 

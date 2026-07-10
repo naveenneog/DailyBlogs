@@ -18,18 +18,28 @@ Not everything that does good is glamorous. Sometimes it's a field engineer prov
 
 ## What it is
 
-[**GpsCamera**](https://naveenneog.github.io/GpsCamera/) is a fast, native Android camera that makes every shot **verifiable**:
+[**GpsCamera**](https://naveenneog.github.io/GpsCamera/) is a fast, native Android camera that makes every shot **verifiable**. Straight from the live site:
 
-- **burns the exact location + a live mini-map** onto the photo
-- writes **standards-compliant GPS EXIF** metadata
-- one tap to **open the spot in Maps**
-- files everything into its **own album**
-- a draggable, resizable stamp; day/night and landscape modes
-- built in **Kotlin + Jetpack Compose + CameraX**
+- **Geotagged capture** — every photo is stamped with the **reverse-geocoded address**, decimal coordinates, **altitude, accuracy** and a timestamp.
+- **Live mini-map** — a real **OpenStreetMap** thumbnail of your exact spot, shown live on the viewfinder *and* burned onto the shot.
+- **Open in Maps** — tap the map (or the link embedded in the photo) to jump straight to the coordinates in Google Maps.
+- **Photo & video**, pinch-to-zoom, and a **full-screen gallery** (swipe, pinch-zoom, open-in-Maps from EXIF, share).
+- **Move & resize the stamp** — drag the info block anywhere and pinch to resize *before* you shoot; it's burned exactly as arranged.
+- **Standards-compliant EXIF** — GPS lat/lon/alt/timestamp + a clickable Maps URL written into the JPEG, so Google Photos and Lightroom place it on a map automatically.
+- **Day & night** themes, portrait **and** landscape reflow, and a dedicated `Pictures/GPSCamera` album.
+
+## How it was built
+
+GpsCamera is deliberately **native and dependency-light** — **Kotlin + Jetpack Compose (Material 3) + CameraX**, min/target SDK 26/35, no heavyweight frameworks. The engineering value is in a few careful choices:
+
+- **Resilient location.** It merges Google Play Services **fused** location *and* the platform **GPS/network providers**, so it still works on devices **without Google Play Services** — exactly the rural/field scenarios it's built for.
+- **No-API-key maps.** The mini-map is stitched from **OpenStreetMap raster tiles** with pure **web-mercator ("slippy map") tile math** — no Maps SDK, no key, no quota. `StaticMapProvider` fetches and stitches the tiles and draws the pin; `PhotoStamper` burns the info panel + map onto the bitmap.
+- **Testable core.** The tricky bits are pure, unit-tested Kotlin — `GpsFormat` (DMS / **EXIF-rational** / stamp text) and `SlippyMap` (tile math + Maps URLs) — plus on-device **instrumented** tests for what can only be verified for real: `ExifWriter` (EXIF read-back), `PhotoStamper`, and `PhotoSaver` (MediaStore storage).
+- Clean module split: `model/GeoFix` · `location/LocationRepository` (fused + platform + reverse geocoding) · `map/StaticMapProvider` · `camera/{PhotoStamper, ExifWriter, PhotoSaver, GalleryRepository}` · Compose `ui/`. The app icon itself was generated with **Azure AI Foundry `gpt-image-2`**.
 
 ## The good
 
-A timestamped, geotagged, tamper-evident photo is a small piece of **infrastructure for accountability** — for insurance, field work, journalism, and public services. Trust is a public good, and GpsCamera hands it to anyone, free.
+A timestamped, geotagged, tamper-evident photo is a small piece of **infrastructure for accountability** — for insurance, field work, journalism, and public services. That it works **without Google Play Services** or a Maps API key means it reaches exactly the low-connectivity places that need proof the most. Trust is a public good, and GpsCamera hands it to anyone, free.
 
 ## Try it
 
