@@ -4,6 +4,7 @@ title: "Carving a Glowing 3D Army from Single Images: Hugging Face + Blender, dr
 date: 2026-07-10 10:00:00 +0530
 categories: ai 3d
 tags: [huggingface, image-to-3d, blender, hunyuan3d, triposr, copilot-cli, threejs, gpt-image-2]
+image: /assets/img/2026-07-10-image-to-3d/hero.jpg
 excerpt: "How I turned one AI concept image per piece into a game-ready, glowing 3D army for Chaturanga — using a free Hugging Face Space for image-to-3D, headless Blender for texture, and GitHub Copilot CLI in autopilot mode to drive the whole thing. Includes the honest journey: the tools that failed, Blender's real limits, and rotating hero renders."
 ---
 
