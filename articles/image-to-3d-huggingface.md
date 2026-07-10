@@ -1,10 +1,11 @@
 ---
-title: "Carving a Glowing 3D Army from Single Images: Hugging Face + Blender, driven by Copilot CLI Autopilot"
+title: 'Carving a Glowing 3D Army from Single Images: Hugging Face + Blender, driven by Copilot CLI Autopilot'
 published: false
-description: "One AI concept image per piece → a free Hugging Face Space for image-to-3D → headless Blender for texture → a game-ready glowing GLB. No local GPU. The honest journey: the tools that failed, Blender's real limits, rotating hero renders — and how GitHub Copilot CLI autopilot drove the whole thing."
-tags: huggingface, blender, ai, 3d
-cover_image: https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/hero.jpg
-canonical_url: https://naveenneog.github.io/DailyBlogs/2026/07/10/image-to-3d-huggingface-blender-copilot/
+description: 'One AI concept image per piece → a free Hugging Face Space for image-to-3D → headless Blender for texture → a game-ready glowing GLB. No local GPU. The honest journey: the tools that failed, Blender''s real limits, rotating hero renders — and how GitHub Copilot CLI autopilot drove the whole thing.'
+tags: 'huggingface, blender, ai, 3d'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/hero.jpg'
+canonical_url: 'https://naveenneog.github.io/DailyBlogs/2026/07/10/image-to-3d-huggingface-blender-copilot/'
+id: 4110965
 ---
 
 > **TL;DR** — One `gpt-image-2` concept image per piece → a **free Hugging Face Space** (`tencent/Hunyuan3D-2`) turns it into a raw 3D mesh → **headless Blender** projects the concept back on as texture → a web-ready **GLB** that glows in Three.js. No local GPU. All of it — the research, the scripts, the Hugging Face calls, the Blender runs, and *this very post and its auto-publish to DEV* — was orchestrated by **GitHub Copilot CLI in autopilot mode**.
