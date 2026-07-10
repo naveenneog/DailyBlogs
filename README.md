@@ -3,8 +3,9 @@
 A GitHub Pages blog (Jekyll) documenting **#AI4Good** — building AI-for-good apps (education, health, culture, heritage) one day at a time, with hands-on guides for Azure, AI, 3D, and mobile.
 
 ## Contents
-- **Flagship post:** `_posts/2026-06-29-onboarding-oss-models-azure-ai-foundry.md` — onboarding open-source models into Azure AI Foundry.
-- **Image → 3D:** `_posts/2026-07-10-image-to-3d-huggingface-blender-copilot.md` — carving a glowing 3D chess army from single images with a free Hugging Face Space (`tencent/Hunyuan3D-2`) + headless Blender, driven by Copilot CLI autopilot. Rich renders + rotating turntables under `assets/img/2026-07-10-image-to-3d/`.
+- **Flagship — #AI4Good build story:** `_posts/2026-07-10-ai4good-an-app-a-day.md` — six AI-for-good apps shipped in eighteen days (KidKat, NeoFit, Sopāna, Chaturanga, ActionCut, GpsCamera), chronological, with live links + screenshots. Cross-posted to DEV.
+- **Image → 3D:** `_posts/2026-07-10-image-to-3d-huggingface-blender-copilot.md` — carving a glowing 3D chess army from single images with a free Hugging Face Space (`tencent/Hunyuan3D-2`) + headless Blender, driven by Copilot CLI autopilot.
+- **Azure AI Foundry:** `_posts/2026-06-29-onboarding-oss-models-azure-ai-foundry.md` — onboarding open-source models into Azure AI Foundry.
 
 ## Run locally
 ```bash
