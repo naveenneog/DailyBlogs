@@ -1,0 +1,28 @@
+name: Publish to DEV
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'articles/**'
+
+# Allow the action to read repo contents (needed to resolve images / commit back the article id).
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Publish to DEV.to
+        uses: sinedied/publish-devto@v2
+        with:
+          devto_key: ${{ secrets.DEV_TO_GIT_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: 'articles/*.md'
+          branch: main
+          conventional_commits: true
