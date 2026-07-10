@@ -1,10 +1,12 @@
 ---
-title: "AI4Good: I Shipped an AI-for-Good App Every Few Days — Here's the Build Story"
+title: 'AI4Good: I Shipped an AI-for-Good App Every Few Days — Here''s the Build Story'
 published: true
-description: "Six apps in eighteen days — a kids' education app, an Indian-language health app, two heritage games, a video editor, and a GPS camera — each built from a laptop with AI in the loop and shipped free to all. This is the #AI4Good build story, chapter by chapter."
-tags: ai4good, ai, opensource, showcase
-cover_image: https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-ai4good-app-a-day/hero.png
-canonical_url: https://naveenneog.github.io/AI4Good/2026/07/10/ai4good-an-app-a-day/
+description: 'Six apps in eighteen days — a kids'' education app, an Indian-language health app, two heritage games, a video editor, and a GPS camera — each built from a laptop with AI in the loop and shipped free to all. This is the #AI4Good build story, chapter by chapter.'
+tags: 'ai4good, ai, opensource, showcase'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-ai4good-app-a-day/hero.png'
+canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/10/ai4good-an-app-a-day/'
+id: 4111622
+date: '2026-07-10T08:14:57Z'
 ---
 
 ![AI4Good — six apps, eighteen days, AI for good](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-ai4good-app-a-day/hero.png)
