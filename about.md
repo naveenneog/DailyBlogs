@@ -9,7 +9,7 @@ AI specialist, speaker, serial entrepreneur, and holder of **4 US patents**.
 
 I help organizations across Asia design and ship real-world AI on Microsoft Azure —
 bringing a decade-plus of deep systems, virtualization, and full-stack engineering to
-the problem. **DailyBlogs** is where I write up what I build: hands-on guides for Azure,
+the problem. **AI4Good** is where I write up what I build: hands-on guides for Azure,
 AI model deployment, 3D/graphics, and mobile — one build a day, zero fluff.
 
 ## What I'm working on

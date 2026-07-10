@@ -1,6 +1,6 @@
-# DailyBlogs
+# AI4Good
 
-A general-topic GitHub Pages blog (Jekyll + minima) on cloud, AI, and engineering.
+A GitHub Pages blog (Jekyll) documenting **#AI4Good** — building AI-for-good apps (education, health, culture, heritage) one day at a time, with hands-on guides for Azure, AI, 3D, and mobile.
 
 ## Contents
 - **Flagship post:** `_posts/2026-06-29-onboarding-oss-models-azure-ai-foundry.md` — onboarding open-source models into Azure AI Foundry.
@@ -9,13 +9,13 @@ A general-topic GitHub Pages blog (Jekyll + minima) on cloud, AI, and engineerin
 ## Run locally
 ```bash
 bundle install
-bundle exec jekyll serve   # http://127.0.0.1:4000/DailyBlogs
+bundle exec jekyll serve   # http://127.0.0.1:4000/AI4Good
 ```
 
 ## Publish to GitHub Pages
-1. Create repo `naveenneog/DailyBlogs`, push `main`.
+1. Repo `naveenneog/AI4Good`, push `main`.
 2. Settings → Pages → Source: **Deploy from branch** → `main` / root.
-3. Site: `https://naveenneog.github.io/DailyBlogs`.
+3. Site: `https://naveenneog.github.io/AI4Good`.
 
 ## Cross-publish to DEV.to (automated)
 Markdown files in [`articles/`](articles/) are auto-synced to [DEV](https://dev.to) on every push to `main`

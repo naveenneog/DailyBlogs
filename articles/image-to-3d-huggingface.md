@@ -3,15 +3,15 @@ title: 'Carving a Glowing 3D Army from Single Images: Hugging Face + Blender, dr
 published: true
 description: 'One AI concept image per piece → a free Hugging Face Space for image-to-3D → headless Blender for texture → a game-ready glowing GLB. No local GPU. The honest journey: the tools that failed, Blender''s real limits, rotating hero renders — and how GitHub Copilot CLI autopilot drove the whole thing.'
 tags: 'huggingface, blender, ai, 3d'
-cover_image: 'https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/hero.jpg'
-canonical_url: 'https://naveenneog.github.io/DailyBlogs/2026/07/10/image-to-3d-huggingface-blender-copilot/'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/hero.jpg'
+canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/10/image-to-3d-huggingface-blender-copilot/'
 id: 4110965
 date: '2026-07-10T07:54:18Z'
 ---
 
 > **TL;DR** — One `gpt-image-2` concept image per piece → a **free Hugging Face Space** (`tencent/Hunyuan3D-2`) turns it into a raw 3D mesh → **headless Blender** projects the concept back on as texture → a web-ready **GLB** that glows in Three.js. No local GPU. All of it — the research, the scripts, the Hugging Face calls, the Blender runs, and *this very post and its auto-publish to DEV* — was orchestrated by **GitHub Copilot CLI in autopilot mode**.
 
-![Glowing gold-vs-purple Chaturanga board](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/hero.jpg)
+![Glowing gold-vs-purple Chaturanga board](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/hero.jpg)
 
 I've been building **[Chaturanga](https://naveenneog.github.io/Chaturanga)** — the ancient Indian "game of the four divisions," played with modern chess moves but authentic piece identities (*Raja, Mantri, Gaja, Ashva, Ratha, Padati*). The board above is the payoff. The hard part was the **pieces**: carved-ivory war figures with real silhouettes, in four themed armies, that spin in a WebGL inspector — built for **free, on a laptop with no GPU**, in a **fully scriptable** way.
 
@@ -19,7 +19,7 @@ Here's how that pipeline came together, including the parts that didn't work.
 
 ## The pipeline at a glance
 
-![Image-to-3D pipeline diagram](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/pipeline.png)
+![Image-to-3D pipeline diagram](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/pipeline.png)
 
 Four stages, each free and headless:
 
@@ -56,14 +56,14 @@ Copilot CLI has the **Hugging Face MCP server** wired in, so I search the Hub wi
 
 The `gpt-image-2` concept on the left, the Hugging Face + Blender result on the right:
 
-![Raja: concept vs 3D](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/concept-vs-3d-raja.png)
-![Ashva: concept vs 3D](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/concept-vs-3d-ashva.png)
+![Raja: concept vs 3D](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/concept-vs-3d-raja.png)
+![Ashva: concept vs 3D](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/concept-vs-3d-ashva.png)
 
 And on the turntable (Raja · Ashva · Gaja):
 
-![Raja turntable](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/turntable-raja.gif)
-![Ashva turntable](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/turntable-ashva.gif)
-![Gaja turntable](https://raw.githubusercontent.com/naveenneog/DailyBlogs/main/assets/img/2026-07-10-image-to-3d/turntable-gaja.gif)
+![Raja turntable](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/turntable-raja.gif)
+![Ashva turntable](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/turntable-ashva.gif)
+![Gaja turntable](https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-image-to-3d/turntable-gaja.gif)
 
 ## Step 3 — Where Blender earns its keep (and where it fights back)
 

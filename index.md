@@ -1,10 +1,10 @@
 ---
 layout: home
 title: Home
-hero_title: "Digital notes from the edge of the stack"
-hero_subtitle: "Hands-on guides for Azure, AI model deployment, and developer tooling — one build a day, zero fluff."
+hero_title: "AI4Good — building AI for good, one app a day"
+hero_subtitle: "Education, health, culture &amp; heritage apps — shipped daily and free to all. Plus hands-on guides for Azure, AI, 3D, and mobile. #AI4Good"
 ---
 
-Welcome to **DailyBlogs** — short, practical write-ups on cloud, AI, and
-software engineering. Architecture playbooks, deployment notes, and
-hands-on build logs.
+Welcome to **AI4Good** — a build log where I ship **AI-for-good** apps one day at a
+time and write up exactly how. Education, health, culture, and heritage — plus the
+occasional deep technical dive into Azure, AI, and 3D.

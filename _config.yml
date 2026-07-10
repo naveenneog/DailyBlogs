@@ -1,6 +1,7 @@
-title: DailyBlogs
-description: A general-topic blog on cloud, AI, and engineering — one build a day.
-baseurl: "/DailyBlogs"
+title: AI4Good
+description: "Building AI for good, one app a day — education, health, culture &amp; heritage apps, plus hands-on guides for Azure, AI, 3D, and mobile. #AI4Good"
+tagline: "AI for Good — one build a day"
+baseurl: "/AI4Good"
 url: "https://naveenneog.github.io"
 permalink: /:year/:month/:day/:title/
 
