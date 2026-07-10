@@ -1,10 +1,12 @@
 ---
-title: "cordless: Managing Remote Terminals & Coding Agents From My Phone, Like Browser Tabs"
+title: 'cordless: Managing Remote Terminals & Coding Agents From My Phone, Like Browser Tabs'
 published: true
-description: "I built cordless — a phone app that manages many remote PTY / Claude Code / Codex sessions like browser tabs, with sessions that survive disconnects and replay on reconnect. The honest build story: designing it in tandem with GPT-5.6 Sol, the 12 real bugs the review caught, security baked in, and the CORS bug only a real Android emulator could surface."
-tags: ai4good, terminal, javascript, opensource
-cover_image: https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-cordless-remote-terminals-in-your-pocket/hero.png
-canonical_url: https://naveenneog.github.io/AI4Good/2026/07/10/cordless-remote-terminals-in-your-pocket/
+description: 'I built cordless — a phone app that manages many remote PTY / Claude Code / Codex sessions like browser tabs, with sessions that survive disconnects and replay on reconnect. The honest build story: designing it in tandem with GPT-5.6 Sol, the 12 real bugs the review caught, security baked in, and the CORS bug only a real Android emulator could surface.'
+tags: 'ai4good, terminal, javascript, opensource'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-10-cordless-remote-terminals-in-your-pocket/hero.png'
+canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/10/cordless-remote-terminals-in-your-pocket/'
+id: 4115689
+date: '2026-07-10T18:45:34Z'
 ---
 
 > **TL;DR** — `cordless` is a tiny **Node daemon** on your dev box that owns real terminal sessions (a shell, or `claude` / `codex`), plus a **phone app** that attaches to them **like browser tabs**. Close the app, switch networks, come back later — your sessions are still running and **replay exactly where you left off**. I designed it in a running conversation with **GPT-5.6 Sol** on Azure, built it with **GitHub Copilot CLI**, and verified it in a **real browser _and_ a real Android emulator**. Live: **[naveenneog.github.io/cordless](https://naveenneog.github.io/cordless/)**.
