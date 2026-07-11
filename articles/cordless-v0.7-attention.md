@@ -1,10 +1,12 @@
 ---
-title: "cordless v0.7: Attention State — Know Which of Your 8 Agent Sessions Needs You"
+title: 'cordless v0.7: Attention State — Know Which of Your 8 Agent Sessions Needs You'
 published: true
-description: "When you run eight Claude Code and Codex sessions at once, the hard part isn't starting them — it's knowing which one is waiting for you. cordless v0.7 infers each session's attention state (working / idle / waiting / bell / finished) from its output, badges it, and can ping your phone via ntfy — plus scrollback search, copy-last-output, and named workspaces."
-tags: ai4good, cli, terminal, productivity
-cover_image: https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-11-cordless-v0.7-attention/card.png
-canonical_url: https://naveenneog.github.io/AI4Good/2026/07/11/cordless-v0.7-attention/
+description: 'When you run eight Claude Code and Codex sessions at once, the hard part isn''t starting them — it''s knowing which one is waiting for you. cordless v0.7 infers each session''s attention state (working / idle / waiting / bell / finished) from its output, badges it, and can ping your phone via ntfy — plus scrollback search, copy-last-output, and named workspaces.'
+tags: 'ai4good, cli, terminal, productivity'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-11-cordless-v0.7-attention/card.png'
+canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/11/cordless-v0.7-attention/'
+id: 4121513
+date: '2026-07-11T18:26:03Z'
 ---
 
 > **TL;DR** — [cordless](https://naveenneog.github.io/cordless/) is a CLI-first tool that manages your remote terminal / coding-agent sessions and puts them on your phone. **v0.7** adds the thing that actually matters when you're juggling many agents: **per-session attention state**. The daemon watches each session's output and infers whether it's *working*, *idle*, or *waiting for you* — then badges it, sorts attention-first, and can push a notification (ntfy / webhook) so you get pinged instead of babysitting. Also new: **scrollback search**, **copy last output**, and **named workspaces**. Designed with **GPT-5.6 Sol**, built with **GitHub Copilot CLI**.
