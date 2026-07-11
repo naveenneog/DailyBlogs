@@ -1,10 +1,12 @@
 ---
-title: "cordless v0.4: Seamless Resume, an In-App QR Scanner, No More Truncation — and a Proper Install Guide"
+title: 'cordless v0.4: Seamless Resume, an In-App QR Scanner, No More Truncation — and a Proper Install Guide'
 published: true
-description: "cordless v0.4 makes the remote-terminal phone app actually livable: your sessions reopen when you turn your machine on, the Android app has a built-in QR scanner, and long lines finally wrap instead of getting chopped off. Plus a clear, copy-pasteable install guide — dependencies and all."
-tags: ai4good, terminal, javascript, tutorial
-cover_image: https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-11-cordless-v0.4-install-guide/card.png
-canonical_url: https://naveenneog.github.io/AI4Good/2026/07/11/cordless-v0.4-install-guide/
+description: 'cordless v0.4 makes the remote-terminal phone app actually livable: your sessions reopen when you turn your machine on, the Android app has a built-in QR scanner, and long lines finally wrap instead of getting chopped off. Plus a clear, copy-pasteable install guide — dependencies and all.'
+tags: 'ai4good, terminal, javascript, tutorial'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-11-cordless-v0.4-install-guide/card.png'
+canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/11/cordless-v0.4-install-guide/'
+id: 4117951
+date: '2026-07-11T07:01:52Z'
 ---
 
 > **TL;DR** — [cordless](https://naveenneog.github.io/cordless/) is a phone app that manages many remote terminal / coding-agent (Claude Code, Codex) sessions **like browser tabs**. **v0.4** adds the three things that were stopping it from being a daily driver: **seamless resume** (sessions reopen when you turn your dev box on), a built-in **QR scanner** in the Android app, and a **mobile fix** so long output wraps instead of truncating — plus font zoom and a copyable session-details sheet. This post is also a **proper install guide**: dependencies and all.
