@@ -1,10 +1,12 @@
 ---
-title: "cordless v0.6: Going CLI-First — Run It, Scan the QR, You're Paired"
+title: 'cordless v0.6: Going CLI-First — Run It, Scan the QR, You''re Paired'
 published: true
-description: "A course-correction reshaped cordless: the CLI is the product now. Run `cordless`, and it opens a full-screen terminal dashboard whose starting screen is a live pairing QR. It ships as one self-contained binary — its own Node runtime and node-pty inside — so there's nothing to install first."
-tags: ai4good, cli, terminal, nodejs
-cover_image: https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-11-cordless-v0.6-cli-first/card.png
-canonical_url: https://naveenneog.github.io/AI4Good/2026/07/11/cordless-v0.6-cli-first/
+description: 'A course-correction reshaped cordless: the CLI is the product now. Run `cordless`, and it opens a full-screen terminal dashboard whose starting screen is a live pairing QR. It ships as one self-contained binary — its own Node runtime and node-pty inside — so there''s nothing to install first.'
+tags: 'ai4good, cli, terminal, nodejs'
+cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-11-cordless-v0.6-cli-first/card.png'
+canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/11/cordless-v0.6-cli-first/'
+id: 4121281
+date: '2026-07-11T17:17:06Z'
 ---
 
 > **TL;DR** — [cordless](https://naveenneog.github.io/cordless/) manages your remote terminal / coding-agent (Claude Code, Codex) sessions and puts them on your phone. **v0.6** makes it **CLI-first**: run `cordless` and it opens a full-screen terminal **dashboard** whose starting screen shows a **live pairing QR** — scan it, done. No separate `cordless pair`, no GUI to babysit. And it now ships as **one self-contained binary** (its own Node runtime **and** `node-pty` baked in), so there's nothing to install first. Designed in a running debate with **GPT-5.6 Sol**, built with **GitHub Copilot CLI**.
