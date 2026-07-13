@@ -5,6 +5,8 @@ description: 'Running so many agent sessions they overflow the screen? cordless 
 tags: 'ai4good, cli, terminal, productivity'
 cover_image: 'https://raw.githubusercontent.com/naveenneog/AI4Good/main/assets/img/2026-07-13-cordless-v0.8-groups/card.png'
 canonical_url: 'https://naveenneog.github.io/AI4Good/2026/07/13/cordless-v0.8-groups/'
+id: 4134586
+date: '2026-07-13T14:51:24Z'
 ---
 
 > **TL;DR** — [cordless](https://naveenneog.github.io/cordless/) is a CLI-first tool that manages your remote terminal / coding-agent sessions and puts them on your phone. **v0.8** is about *organising* the swarm: **Chrome-mobile-style tab groups**, **custom launchers** (bring any command as a profile), a built-in **GitHub Copilot CLI** profile, **renameable tabs**, and **persisted scrollback history** so a reopened session after a reboot shows what it was doing. There's also a proper **`cordless setup`** installer. Six features, each on its own branch — designed with **GPT-5.6 Sol**, built with **GitHub Copilot CLI**.
