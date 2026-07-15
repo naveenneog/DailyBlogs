@@ -4,7 +4,7 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/videogen.css' | relative_url }}">
 <article class="videogen">
   <div class="vg-hero">
-    <span class="vg-kicker">// LAUNCH TRANSMISSION · {{ page.date | date: '%b %d, %Y' }}</span>
+    <span class="vg-date">Launch · {{ page.date | date: '%b %d, %Y' }}</span>
     <h1 class="vg-title">{{ page.hero_title | default: page.title }}</h1>
     <p class="vg-sub">{{ page.hero_subtitle | default: page.excerpt | strip_html | truncate: 220 }}</p>
     <div class="vg-meta">

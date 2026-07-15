@@ -2,12 +2,13 @@
 layout: default
 ---
 <section class="hero">
-  <span class="kicker">// TRANSMISSIONS FROM THE STACK</span>
+  <span class="hero-eyebrow">A build log — one app a day</span>
   <h1 class="hero-title">{{ page.hero_title | default: site.title }}</h1>
   <p class="hero-sub">{{ page.hero_subtitle | default: site.description }}</p>
   <div class="hero-cta">
     {% assign latest = site.posts.first %}
-    {% if latest %}<a class="btn btn-primary" href="{{ latest.url | relative_url }}">Read latest ↗</a>{% endif %}
+    {% if latest %}<a class="btn btn-primary" href="{{ latest.url | relative_url }}">Read the latest →</a>{% endif %}
+    <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About this project</a>
   </div>
 </section>
 
