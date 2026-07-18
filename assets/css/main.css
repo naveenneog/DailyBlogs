@@ -124,7 +124,7 @@ img{max-width:100%}
 .site-main{padding:clamp(44px,6vw,80px) 24px 48px;min-height:60vh}
 
 /* ---------- hero ---------- */
-.hero{margin:clamp(24px,5vw,60px) 0 clamp(32px,5vw,52px);max-width:20ch}
+.hero{margin:clamp(24px,5vw,60px) 0 clamp(32px,5vw,52px)}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:9px;margin-bottom:24px;
   font-family:var(--mono);font-weight:400;font-size:0.78rem;letter-spacing:0.06em;
@@ -134,7 +134,7 @@ img{max-width:100%}
 .hero-title{
   font-family:var(--serif);font-optical-sizing:auto;font-weight:560;
   font-size:clamp(2.7rem,6.4vw,4.7rem);line-height:1.0;letter-spacing:-0.025em;
-  margin:0 0 24px;color:var(--ink);text-wrap:balance;
+  margin:0 0 24px;color:var(--ink);text-wrap:balance;max-width:15ch;
 }
 .hero-title em{
   font-style:italic;font-weight:500;color:var(--accent);
