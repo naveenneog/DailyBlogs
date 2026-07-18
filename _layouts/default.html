@@ -6,7 +6,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&family=Alumni+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="64x64" href="{{ '/assets/favicon.png' | relative_url }}">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script>document.documentElement.classList.add('has-js');</script>
   {% seo %}
@@ -32,7 +34,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand-mark">◆</span>
+        <img class="brand-mark" src="{{ '/assets/img/site/logo.png' | relative_url }}" alt="" width="30" height="30" />
         <span class="brand-name">AI4<span class="accent">Good</span></span>
       </a>
       <nav class="site-nav">

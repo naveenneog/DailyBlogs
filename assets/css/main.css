@@ -127,10 +127,8 @@ img{max-width:100%}
 .header-inner{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:16px}
 .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--sans);font-weight:700;font-size:1.2rem;letter-spacing:-0.01em;color:#eaf0fb}
 .brand-mark{
-  width:1.7em;height:1.7em;border-radius:8px;
-  background:var(--grad);color:#0a0d15;
-  display:grid;place-items:center;font-family:var(--sans);font-size:0.62em;font-weight:800;line-height:1;
-  box-shadow:var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.35);
+  width:1.9em;height:1.9em;border-radius:9px;display:block;object-fit:cover;
+  box-shadow:var(--shadow-sm), 0 0 0 1px var(--line);
 }
 .brand .accent{
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -164,6 +162,14 @@ img{max-width:100%}
 .hero-title em, .hero-title .grad{
   font-style:normal;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-title .nowrap{white-space:nowrap}
+/* wordplay: "one app(le) a day" — 'le' struck through so app winks at apple */
+.hero-title .le{
+  color:var(--faint);
+  text-decoration:line-through;
+  text-decoration-color:var(--blue);
+  text-decoration-thickness:0.07em;
 }
 .hero-sub{
   max-width:38em;margin:0;color:var(--muted);font-family:var(--sans);

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-hero_title: "Building <span class=\"grad\">AI for good</span>, one app a day"
+hero_title: "Building <span class=\"grad nowrap\">AI for Good</span>, one app<s class=\"le\">le</s> a day"
 hero_subtitle: "Education, health, culture &amp; heritage apps — shipped daily and free to all. Plus hands-on guides for Azure, AI, 3D, and mobile. #AI4Good"
 ---
 
